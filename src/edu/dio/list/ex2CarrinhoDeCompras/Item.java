@@ -1,15 +1,16 @@
 package edu.dio.list.ex2CarrinhoDeCompras;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Item {
     private String nome;
     private BigDecimal preco;
     private int quantidade;
 
-    public Item(String nome, BigDecimal preco, int quantidade) {
+    public Item(String nome, double preco, int quantidade) {
         this.nome = nome;
-        this.preco = preco;
+        this.preco = new BigDecimal(preco).setScale(2, RoundingMode.HALF_UP);
         this.quantidade = quantidade;
     }
 
@@ -27,6 +28,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return "- " + nome + " | " + preco + " | " + quantidade;
+        return "- " + nome + " | R$ " + preco + " | " + quantidade;
     }
 }

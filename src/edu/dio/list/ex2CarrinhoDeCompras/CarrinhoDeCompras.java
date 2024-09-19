@@ -12,7 +12,7 @@ public class CarrinhoDeCompras {
         carrinho = new ArrayList<Item>();
     }
 
-    public void adicionarItem(String nome, BigDecimal preco, int quantidade){
+    public void adicionarItem(String nome, double preco, int quantidade){
         carrinho.add(new Item(nome, preco, quantidade));
     }
 
@@ -29,13 +29,13 @@ public class CarrinhoDeCompras {
     public String calcularValorTotal(){
         BigDecimal soma = new BigDecimal(0);
         for (Item item : carrinho){
-            soma.add(item.getPreco());
+            soma = soma.add(item.getPreco());
     }
-        return "R$ " + soma.doubleValue();
+        return "R$ " + soma;
         }
 
     public void exibirItens(){
-        System.out.println("ITEM  |  VALOR  |  QUANTIDADE");
+        System.out.println("ITEM | VALOR | QUANTIDADE");
         for (Item item : carrinho){
             System.out.println(item);
         }

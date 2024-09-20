@@ -29,7 +29,7 @@ public class CarrinhoDeCompras {
     public String calcularValorTotal(){
         BigDecimal soma = new BigDecimal(0);
         for (Item item : carrinho){
-            soma = soma.add(item.getPreco());
+            soma = soma.add(new BigDecimal(item.getQuantidade()).multiply(item.getPreco()));
     }
         return "R$ " + soma;
         }

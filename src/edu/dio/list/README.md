@@ -26,7 +26,7 @@ Crie uma classe chamada **`CarrinhoDeCompras`** que representa um carrinho de co
 
 ### Pesquisa em List
 
-#### 1. Catálogo de Livros
+#### 3. Catálogo de Livros
 Crie uma classe chamada **`CatalogoLivros`** que possui uma lista de objetos do tipo **`Livro`** como atributo. Cada livro possui atributos como título, autor e ano de publicação. Implemente os seguintes métodos:
 
 - **`adicionarLivro(String titulo, String autor, int anoPublicacao)`**: Adiciona um livro ao catálogo.
@@ -34,7 +34,7 @@ Crie uma classe chamada **`CatalogoLivros`** que possui uma lista de objetos do 
 - **`pesquisarPorIntervaloAnos(int anoInicial, int anoFinal)`**: Pesquisa livros publicados em um determinado intervalo de anos e retorna uma lista com os livros encontrados.
 - **`pesquisarPorTitulo(String titulo)`**: Pesquisa livros por título e retorna o primeiro livro encontrado.
 
-#### 2. Soma de Números
+#### 4. Soma de Números
 Crie uma classe chamada **`SomaNumeros`** que possui uma lista de números inteiros como atributo. Implemente os seguintes métodos:
 
 - **`adicionarNumero(int numero)`**: Adiciona um número à lista de números.
@@ -47,14 +47,14 @@ Crie uma classe chamada **`SomaNumeros`** que possui uma lista de números intei
 
 ### Ordenação em List
 
-#### 1. Ordenação de Pessoas
+#### 5. Ordenação de Pessoas
 Crie uma classe chamada **`OrdenacaoPessoas`** que possui uma lista de objetos do tipo **`Pessoa`** como atributo. Cada pessoa possui atributos como nome, idade e altura. Implemente os seguintes métodos:
 
 - **`adicionarPessoa(String nome, int idade, double altura)`**: Adiciona uma pessoa à lista.
 - **`ordenarPorIdade()`**: Ordena as pessoas da lista por idade usando a interface **Comparable**.
 - **`ordenarPorAltura()`**: Ordena as pessoas da lista por altura usando um **Comparator** personalizado.
 
-#### 2. Ordenação de Números
+#### 6. Ordenação de Números
 Crie uma classe chamada **`OrdenacaoNumeros`** que possui uma lista de números inteiros como atributo. Implemente os seguintes métodos:
 
 - **`adicionarNumero(int numero)`**: Adiciona um número à lista.

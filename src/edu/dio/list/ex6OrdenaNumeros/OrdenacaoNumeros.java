@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class OrdenacaoNumeros {
-    List<Integer> listaNumeros;
+    private List<Integer> listaNumeros;
 
     public OrdenacaoNumeros (){
         listaNumeros = new ArrayList<>();

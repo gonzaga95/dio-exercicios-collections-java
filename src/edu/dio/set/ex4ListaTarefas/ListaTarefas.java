@@ -15,14 +15,18 @@ public class ListaTarefas {
     }
 
     public void removerTarefa(String descricao){
+        Tarefa tarefaParaRemover = null;
         if (!tarefas.isEmpty()){
             for (Tarefa tarefa : tarefas) {
                 if (tarefa.getDescricao().equalsIgnoreCase(descricao)){
-                    tarefas.remove(tarefa);
+                    tarefaParaRemover = tarefa;
+                    break;
                 }
-                else throw new RuntimeException("Tarefa não localizada");
             }
+            tarefas.remove(tarefaParaRemover);
         } else throw new RuntimeException("Lista de tarefas vazia");
+
+        if (tarefaParaRemover == null) throw new RuntimeException("Tarefa não localizada");
     }
 
     public Set<Tarefa> exibirTarefas() {
@@ -82,4 +86,20 @@ public class ListaTarefas {
     public void limparListaTarefas(){
         this.tarefas.clear();
     }
+
+    public static void main(String[] args) {
+        ListaTarefas listaTarefas = new ListaTarefas();
+        listaTarefas.adicionarTarefa("descricao 1");
+        listaTarefas.adicionarTarefa("descricao 2");
+        listaTarefas.adicionarTarefa("descricao 2");
+        listaTarefas.adicionarTarefa("descricao 3");
+        System.out.println(listaTarefas.contarTarefas());
+        System.out.println(listaTarefas.exibirTarefas());
+
+        listaTarefas.removerTarefa("descricao 3");
+
+        listaTarefas.marcarTarefaConcluida("descricao 1");
+        System.out.println(listaTarefas.obterTarefasConcluidas());
+    }
 }
+
